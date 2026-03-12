@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "concurrently \"node server.js\" \"vite --host 0.0.0.0\"",
     "server": "node server.js",
-    "client": "vite --host 0.0.0.0"
+    "client": "vite --host 0.0.0.0",
+    "test": "node --test test/**/*.test.js",
+    "test:security": "node --test test/security-headers.test.js"
   },
   "dependencies": {
+    "@fastify/helmet": "^13.0.2",
     "@fastify/static": "^9.0.0",
     "@fastify/websocket": "^11.2.0",
     "fastify": "^5.0.0",
